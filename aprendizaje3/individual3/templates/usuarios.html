@@ -6,10 +6,21 @@
 </head>
 <body>
     <h1 align="center">USUARIOS REGISTRADOS</h1>
-    {% for u in usuarios %}
-    {{u.first_name}} 
-    {{u.last_name}} 
-    {{u.email}}
-    {% endfor %}
+    <table align="center">
+
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+        </tr>
+        {% for u in usuarios %}
+        <tr>
+            <td>{{u.first_name}} </td>
+            <td>{{u.last_name}} </td>
+            <td>{{u.email}}</td>
+        </tr>
+        {% endfor %}
+        
+        </table>
 </body>
 </html>

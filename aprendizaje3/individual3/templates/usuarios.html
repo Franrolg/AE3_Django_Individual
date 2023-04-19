@@ -1,26 +1,29 @@
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TE LO VENDO</title>
-</head>
-<body>
-    <h1 align="center">USUARIOS REGISTRADOS</h1>
-    <table align="center">
+{% extends "base.html" %}
 
-        <tr>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Email</th>
-        </tr>
-        {% for u in usuarios %}
-        <tr>
-            <td>{{u.first_name}} </td>
-            <td>{{u.last_name}} </td>
-            <td>{{u.email}}</td>
-        </tr>
-        {% endfor %}
-        
-        </table>
-</body>
-</html>
+{% block  content%}
+    <h1>USUARIOS REGISTRADOS</h1>
+    <div class="container justify-content-center">
+    <table class="table col-12">
+        <thead>
+          <tr>
+            <th class="col-2" scope="col">#</th>
+            <th class="col-3" scope="col">Nombre</th>
+            <th class="col-3" scope="col">Apellido</th>
+            <th class="col-4" scope="col">Email</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for u in usuarios %}
+            <tr>
+                <th scope="row">{{ forloop.counter }} </th>
+                <td>{{u.first_name}} </td>
+                <td>{{u.last_name}} </td>
+                <td>{{u.email}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    
+{% endblock%}

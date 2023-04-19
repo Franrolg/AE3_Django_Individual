@@ -5,14 +5,15 @@
     background-attachment: fixed;
 }
 
-h1{
-    text-align: center;
-    margin-top: 10vh;
-}
-
-a{
+.link{
     color:black;
     text-decoration: overline;
+}
+
+h1{
+    text-align: center;
+    color:black;
+    margin-top: 10vh;
 }
 
 img{
